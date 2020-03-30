@@ -3,15 +3,15 @@
 // Generiamo un numero random (sempre da 1 a 5) per il computer.
 //  Sommiamo i due numeri e dichiariamo chi ha vinto.
 
-var pari = document.getElementById('pari').innerHTML;
-var dispari = document.getElementById('dispari').innerHTML;
+var pari = document.getElementById("pari").innerHTML;
+var dispari = document.getElementById("dispari").innerHTML;
 var risultato = document.getElementById("risultato");
-
+var sceltaUtente = document.getElementById("scelta-utente");
+var sceltaPc = document.getElementById("scelta-pc");
 
 
 function pariFunction() {
 
-  risultato.innerHTML = "";
 
   randomNumber = creoNumero()
 
@@ -21,12 +21,10 @@ function pariFunction() {
     alert("Hai scelto pari. Peccato, vince il computer!")
   }
 
-
 }
 
 function dispariFunction() {
 
-  risultato.innerHTML = "";
 
   randomNumber = creoNumero()
 
@@ -52,9 +50,11 @@ function creoNumero(){
     modSomma = "Dispari";
   }
 
-  alert("E' uscito il numero " + sommaNum + ".")
+  alert("Il totale dei due numeri è " + sommaNum + ".")
 
-  risultato.innerHTML = "Il numero generato era " + sommaNum + ". Scegli ancora pari o dispari per continuare a giocare.";
+  risultato.innerHTML = "Scegli ancora pari o dispari per continuare a giocare.";
+  sceltaPc.innerHTML = "Numero del pc: " + numeroRandomPc;
+  sceltaUtente.innerHTML = "Numero dell'utente: " + numeroRandomUtente;
 
 
   return modSomma;
