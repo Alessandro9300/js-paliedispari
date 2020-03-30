@@ -20,14 +20,14 @@ function myFunction() {
 
   var reverseString = getReverse(valText);
 
-  inpParola.innerHTML = valText;
-  inpVerifica.innerHTML = reverseString;
+  inpParola.innerHTML = "parola normale: " + valText;
+  inpVerifica.innerHTML = "parola rovesciata: " + reverseString;
 
 
   if (valText === reverseString){
-    inpPalindrome.innerHTML = "Le parle sono palindrome";
+    inpPalindrome.innerHTML = "La parola è palindroma";
   } else {
-    inpPalindrome.innerHTML = "Le parole non sono palindrome"
+    inpPalindrome.innerHTML = "La parola non è palindroma "
   }
 
     inpText.value = "";
